@@ -1,0 +1,74 @@
+.webgis__header {
+    display: inline-block;
+}
+
+.webgis__header-content_top p{
+    display: flex;
+    font-size: 45px;
+    margin-top: -3rem;
+    margin-left: -2rem;
+}
+
+.webgis__header-content_bottom p1{
+    display: flex;
+    margin-top: 1rem;
+    font-size: 35px;
+    margin-left: -2rem;
+}
+
+.webgis__header-content_bottom p2{
+    display: flex;
+    margin-top:-4rem;
+    font-size: 28px;
+    margin-left: -2rem;
+}
+
+.webgis__header-content_top p,
+.webgis__header-content_bottom p1, 
+.webgis__header-content_bottom p2 {
+    display: flex;
+    margin-bottom: 4rem;
+
+    font-family: var(--font-family);
+    font-weight: 700;
+    color: white;
+    
+}
+
+.webgis__header-content_mid h1{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    line-height: 131px;
+    letter-spacing: 1px;
+    margin-top: -6rem;
+    margin-left: -2rem;
+
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 155px;
+    color: wheat;
+
+}
+.webgis__header-content_mid{
+    display: flex;
+}
+.webgis__header-content_image img{
+    display: flex;
+    margin-left: 17rem;
+    height: 40rem;
+    border-radius: 50px;
+    margin-top: -7rem;
+
+}
+
+@media screen and (max-width: 1050px) {
+    .webgis__header {
+        flex-direction: column ;
+    }
+
+    .webgis__header-content_top {
+        margin: 0 0 3rem;
+    }
+}

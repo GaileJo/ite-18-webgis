@@ -1,0 +1,78 @@
+    .webgis__features {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .webgis__features-heading {
+        flex: 1;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+
+        text-align: left;
+        margin-right: 5rem;
+    }
+
+    .webgis__features-heading h1 {
+        font-family: var(--font-family);
+        font-size: 80px;
+        font-weight: 800;
+        color: var(--color-text);
+        line-height: 85px;
+        margin-top: 7rem;
+        margin-left: 2rem;
+    }
+
+    .webgis__features-heading p {
+        font-family: var(--font-family);
+        font-size: 24px;
+        font-weight: 500;
+        color: white;
+        margin-top: 3rem;
+        margin-left: 2.5rem;
+    }
+
+    .webgis__features-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        margin-left: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    .webgis__features-heading button {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-left: 2.5rem;
+        margin-top: 2rem;
+
+        font-family: var(--font-family);
+        font-weight: bold;
+        font-size: 22px;
+        padding: 1.5rem 2rem;
+        border-radius: 50px;
+        color: black;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 990px) {
+        .webgis__features {
+            flex-direction: column;
+        }
+
+        .webgis__features-heading {
+            margin: 0 0 2rem 0;
+        }
+    }
+
+    @media screen and (max-width: 550px) {
+        .webgis__features-heading h1 {
+            font-size: 28px;
+            line-height: 38px;
+        }
+    }

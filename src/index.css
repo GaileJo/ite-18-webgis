@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada:wght@400;600&display=swap');
+
+:root {
+    --font-family: 'Radio Canada';
+
+    --header-text: #FFFFEA;
+    --color-bar:#FFFFEA;
+
+    --color-bg: #040C18;
+    --color-footer: #021325;
+    --color-blog: #042c54;
+    --color-text: #81AFDD;
+    --color-subtext: #FF8A71;
+}

@@ -1,0 +1,111 @@
+.webgis__footer {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    background: var(--color-footer);
+}
+
+.webgis__footer-heading {
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.webgis__footer-heading_logo1 {
+   margin-left: 19em;
+   cursor: pointer;
+}
+
+.webgis__footer-heading_logo2 {
+    margin-left: 6rem;
+    cursor: pointer;
+}
+
+.webgis__footer-heading_title h1 {
+    font-family: var(--font-family);
+    font-size: 50px;
+    color: white;
+}
+.webgis__footer-heading_title h3 {
+    font-family: var(--font-family);
+    font-size: 23px;
+    color: var(--color-text)
+}
+
+.webgis__footer-information {
+    font-family: var(--font-family);
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+
+.webgis__footer-information_details{
+    margin-right: 15rem;
+}
+
+.webgis__footer-information_socmed {
+    margin-left: 10rem;
+}
+
+.webgis__footer-information_details h3,
+.webgis__footer-information_socmed h3 {
+    font-size: 29px;
+    margin-bottom: 1.5rem;
+    color: var(--header-text);
+    cursor: pointer;
+}
+
+.webgis__footer-information_details p,
+.webgis__footer-information_socmed p {
+    font-size: 21px;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+}
+
+.webgis__footer-disclaimer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 14px;
+    color: var(--color-blog);
+    max-width: 1800px;
+    margin: 1rem;
+    margin-bottom: 0;
+
+}
+
+@media screen and (max-width: 850px) {
+    .webgis__footer-heading h1 {
+        font-size: 44px;
+        line-height: 50px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .webgis__footer-heading h1 {
+        font-size: 34px;
+        line-height: 42px;
+    }
+    .webgis__footer-information {
+        margin: 1rem;
+    }
+
+    .webgis__footer-information_details, 
+    .webgis__footer-information_socmed {
+        font-size: 14px;
+        line-height: 20px;
+   }
+   .webgis__footer-information_details {
+        margin-right: 1rem;
+   }
+   .webgis__footer-information_socmed {
+    margin-left: 2rem;
+}
+}
