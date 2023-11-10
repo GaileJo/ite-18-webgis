@@ -1,14 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Radio+Canada:wght@400;600&display=swap');
-
 :root {
-    --font-family: 'Radio Canada';
+  --font-family: 'Radio Canada';
 
-    --header-text: #FFFFEA;
-    --color-bar:#FFFFEA;
+  --header-text: #ffffea;
+  --color-bar: #ffffea;
 
-    --color-bg: #040C18;
-    --color-footer: #021325;
-    --color-blog: #042c54;
-    --color-text: #81AFDD;
-    --color-subtext: #FF8A71;
+  --color-bg: #040c18;
+  --color-footer: #021325;
+  --color-blog: #042c54;
+  --color-text: #81afdd;
+  --color-subtext: #ff8a71;
 }

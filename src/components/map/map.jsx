@@ -1,10 +1,6 @@
-import React from 'react'
-import './map.css'
-
+import React from 'react';
+import './map.css';
+import GisMap from './GisMap';
 export default function Map() {
-  return (
-    <div className='webgis__map section__padding' id="map">
-      Map
-    </div>
-  )
+  return <GisMap />;
 }
