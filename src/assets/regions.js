@@ -1,0 +1,17 @@
+export var regions = [
+  'ARMM',
+  'CAR',
+  'Region I',
+  'Region II',
+  'Region III',
+  'Region IV-A',
+  'Region IV-B',
+  'Region V',
+  'Region VI',
+  'Region VII',
+  'Region VIII',
+  'Region IX',
+  'Region X',
+  'Region XI',
+  'CARAGA',
+];
