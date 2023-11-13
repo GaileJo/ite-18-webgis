@@ -49,6 +49,7 @@ function GisMap() {
   const inputRef = useRef();
   const queryRef = useRef();
   const zoomOutRef = useRef();
+  const posRef = useRef();
   const mapElement = useRef();
   const wfsUrl = 'http://localhost:8080/geoserver/ows';
   const handleMapClick = event => {
@@ -146,9 +147,8 @@ function GisMap() {
     var mousePosition = new control.MousePosition({
       className: 'mousePosition',
       projection: 'EPSG:4326',
-      coordinateFormat: function (coord) {
-        return coordinate.format(coord, '{y}{x}', 6);
-      },
+      coordinateFormat: coordinate.createStringXY(4),
+      target: posRef.current,
     });
 
     //creating a map
@@ -168,6 +168,8 @@ function GisMap() {
     initialMap.addControl(zoomOutControl);
     initialMap.addControl(queryControl);
     initialMap.addControl(layerSwitcher);
+    initialMap.addControl(scaleControl);
+    initialMap.addControl(mousePosition);
     initialMap.on('click', handleMapClick);
     if (queryResult !== null) {
       const vectorSource = new VectorSource();
@@ -275,6 +277,7 @@ function GisMap() {
             ref={mapElement}
             className='w-full h-full overflow-hidden relative'
           ></div>
+          <h1 ref={posRef}></h1>
         </div>
 
         <div className=' flex flex-col space-y-2 py-3 '>
