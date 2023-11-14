@@ -69,7 +69,6 @@ function GisMap() {
   const handleMapClick = event => {
     const resolution = map.getView().getResolution();
     const projection = map.getView().getProjection();
-    console.log('map clicked');
     //created url that will be used for fetching data in geoserver
     const url = depedLayer
       .getSource()
@@ -78,7 +77,6 @@ function GisMap() {
         propertyName:
           'school_nam,region,province,municipali,division,enrollment,district',
       });
-    console.log(url);
     axios.get(url).then(response => {
       if (response.data.features.length) {
         const data = response.data.features[0];
@@ -92,10 +90,10 @@ function GisMap() {
           enrollment: data.properties.enrollment,
           district: data.properties.district,
         });
-        console.log(data);
       }
     });
   };
+  map?.on('click', handleMapClick);
   //the depedLayer tile layer
   const depedLayer = new layer.Tile({
     title: 'Deped Philippine Layer',
@@ -201,7 +199,7 @@ function GisMap() {
     initialMap.addControl(scaleControl);
     initialMap.addControl(mousePosition);
     //references when clicking the map to the handleMapClick. So basically this handleMapclick will define the logic once the map is clicked as defined above
-    initialMap.on('click', handleMapClick);
+
     //this will dynamically put markers to the map or put the pin once the we have acquired data from our query
     //if we have already a result for the query then we instantiate a vector souce object and foreach result we have obtained, we will make a marker oject to each result and then append it to our vector source
     //also we have added a customized svg file
@@ -248,7 +246,7 @@ function GisMap() {
   function handlefsButtonClick() {
     var mapFull = mapElement.current;
     if (mapFull.requestFullscreen) {
-      map.requestFullscreen();
+      mapFull.requestFullscreen();
     } else if (mapFull.mozRequestFullScreen) {
       map.mozRequestFullScreen();
     } else if (mapFull.webkitRequestFullscreen) {
